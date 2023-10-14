@@ -15,7 +15,12 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
-  rules: {}
+  rules: {
+    'prettier/prettier': 'error',
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+  }
 }
