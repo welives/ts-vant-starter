@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  clsx:
+    specifier: ^2.0.0
+    version: 2.0.0
   pinia:
     specifier: ^2.1.6
     version: 2.1.7(typescript@5.2.2)(vue@3.3.4)
@@ -67,6 +70,9 @@ devDependencies:
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
+  sass:
+    specifier: ^1.69.3
+    version: 1.69.3
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
@@ -78,7 +84,7 @@ devDependencies:
     version: 0.25.2(vue@3.3.4)
   vite:
     specifier: ^4.4.9
-    version: 4.4.11(@types/node@18.18.5)
+    version: 4.4.11(@types/node@18.18.5)(sass@1.69.3)
   vue-tsc:
     specifier: ^1.8.11
     version: 1.8.19(typescript@5.2.2)
@@ -906,7 +912,7 @@ packages:
       '@babel/core': 7.23.2
       '@babel/plugin-transform-typescript': 7.22.15(@babel/core@7.23.2)
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.23.2)
-      vite: 4.4.11(@types/node@18.18.5)
+      vite: 4.4.11(@types/node@18.18.5)(sass@1.69.3)
       vue: 3.3.4
     transitivePeerDependencies:
       - supports-color
@@ -919,7 +925,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.11(@types/node@18.18.5)
+      vite: 4.4.11(@types/node@18.18.5)(sass@1.69.3)
       vue: 3.3.4
     dev: true
 
@@ -1309,6 +1315,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /clsx@2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -1858,6 +1869,10 @@ packages:
   /ignore@5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
+    dev: true
+
+  /immutable@4.3.4:
+    resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==}
     dev: true
 
   /import-fresh@3.3.0:
@@ -2536,6 +2551,16 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /sass@1.69.3:
+    resolution: {integrity: sha512-X99+a2iGdXkdWn1akFPs0ZmelUzyAQfvqYc2P/MPTrJRuIRoTffGzT9W9nFqG00S+c8hXzVmgxhUuHFdrwxkhQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.4
+      source-map-js: 1.0.2
+    dev: true
+
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
@@ -2857,7 +2882,7 @@ packages:
       vue: 3.3.4
     dev: false
 
-  /vite@4.4.11(@types/node@18.18.5):
+  /vite@4.4.11(@types/node@18.18.5)(sass@1.69.3):
     resolution: {integrity: sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2889,6 +2914,7 @@ packages:
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
+      sass: 1.69.3
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
