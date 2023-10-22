@@ -6,7 +6,7 @@ delete colors.trueGray
 delete colors.coolGray
 delete colors.blueGray
 export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{vue,jsx,tsx}'],
   theme: {
     colors: { ...colors },
     extend: {},

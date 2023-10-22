@@ -14,8 +14,7 @@ dist
 .output
 dist-ssr
 coverage
-.env
-.env.*
+.env*
 
 /cypress/videos/
 /cypress/screenshots/
@@ -29,3 +28,4 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+*.code-workspace
