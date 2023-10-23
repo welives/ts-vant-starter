@@ -1,4 +1,4 @@
-# ts-vite-starter
+# vite-starter
 
 这是一个 `Vite` + `TailwindCSS` + `TypeScript` + `ESLint` + `Prettier` 的起手式
 
@@ -14,27 +14,11 @@ pnpm install
 
 ### 开发模式
 
-生成环境变量文件，并填入项目所需信息
-
-```sh
-mv example.env .env.local
-```
-
-启动开发模式
-
 ```sh
 pnpm dev
 ```
 
 ### 打包
-
-生成环境变量文件，并填入项目所需信息
-
-```sh
-mv example.env .env.production
-```
-
-执行打包
 
 ```sh
 pnpm build
@@ -49,7 +33,7 @@ pnpm lint
 ## 相关文档
 
 - [Vite](https://cn.vitejs.dev/)
-- [Vant](https://vant-ui.github.io/vant/#/zh-CN)
+- [React-Vant](https://react-vant.3lang.dev/)
 - [TypeScript](https://www.tslang.cn/)
 - [TailwindCSS](https://tailwind.nodejs.cn/)
 - [ESLint](https://eslint.nodejs.cn/)

@@ -2,13 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Like } from '@react-vant/icons'
+import { Button } from 'react-vant'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
+      <div className="flex justify-center">
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -17,6 +19,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Button icon={<Like />} round color="linear-gradient(to right, #ff6034, #ee0a24)" size="small">
+        Like
+      </Button>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
