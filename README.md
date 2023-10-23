@@ -1,8 +1,8 @@
-# ts-vant-starter
+# ts-vite-starter
 
-这是一个 `Vant` + `TailwindCSS` + `TypeScript` + `ESLint` + `Prettier` 的起手式
+这是一个 `Vite` + `TailwindCSS` + `TypeScript` + `ESLint` + `Prettier` 的起手式
 
-`main`分支是以 Vite 为基础搭建的，`with-nuxt3`分支是以 Nuxt3 为基础搭建的
+`main`分支是 Vue 项目，`use-react`分支是 React 项目
 
 这个工程的搭建笔记可以在这里[查看](https://welives.github.io/blog/front-end/engineering/vite.html)
 
@@ -17,7 +17,7 @@ pnpm install
 生成环境变量文件，并填入项目所需信息
 
 ```sh
-mv example.env .env
+mv example.env .env.local
 ```
 
 启动开发模式
@@ -28,20 +28,27 @@ pnpm dev
 
 ### 打包
 
+生成环境变量文件，并填入项目所需信息
+
+```sh
+mv example.env .env.production
+```
+
+执行打包
+
 ```sh
 pnpm build
 ```
 
-### 预览
+### 代码规范检查
 
 ```sh
-pnpm preview
+pnpm lint
 ```
 
 ## 相关文档
 
 - [Vite](https://cn.vitejs.dev/)
-- [Nuxt3](https://nuxt.com.cn/)
 - [Vant](https://vant-ui.github.io/vant/#/zh-CN)
 - [TypeScript](https://www.tslang.cn/)
 - [TailwindCSS](https://tailwind.nodejs.cn/)
