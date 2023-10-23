@@ -3,6 +3,3 @@ node_modules
 dist
 .idea
 .vscode
-.nuxt
-*.md
-*.json

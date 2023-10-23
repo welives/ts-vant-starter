@@ -1,11 +1,11 @@
 {
-  "name": "vite-vant-starter",
-  "description": "一个 Vant + TailwindCSS + TypeScript + Vite + ESLint + Prettier 的基础项目",
+  "name": "vite-starter",
+  "description": "一个 Vite + TailwindCSS + TypeScript + ESLint + Prettier 的基础项目",
   "version": "1.0.0",
   "keywords": [
-    "vant",
-    "vue",
     "vite",
+    "vue",
+    "vant",
     "tailwind",
     "typescript",
     "eslint",
