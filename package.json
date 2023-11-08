@@ -1,15 +1,16 @@
 {
   "name": "vite-starter",
-  "description": "一个 Vite + TailwindCSS + TypeScript + ESLint + Prettier 的基础项目",
+  "description": "开箱即用的基于 Vite + React + Zustand + Vant + TailwindCSS + TypeScript 的模板",
   "version": "1.0.0",
   "keywords": [
-    "vite",
-    "react",
-    "vant",
-    "tailwind",
-    "typescript",
-    "eslint",
-    "prettier"
+    "Vite",
+    "React",
+    "Zustand",
+    "Vant",
+    "TailwindCSS",
+    "TypeScript",
+    "ESLint",
+    "Prettier"
   ],
   "author": "welives",
   "license": "MIT",
@@ -22,9 +23,12 @@
   },
   "dependencies": {
     "@react-vant/icons": "^0.0.10",
+    "axios": "^1.6.1",
+    "immer": "^10.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-vant": "^3.3.2"
+    "react-vant": "^3.3.2",
+    "zustand": "^4.4.6"
   },
   "devDependencies": {
     "@types/node": "^20.8.7",

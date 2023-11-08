@@ -1,13 +1,13 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Like } from '@react-vant/icons'
 import { Button } from 'react-vant'
+import { useCounterStore, useCounterReset } from './models'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const count = useCounterStore.use.count()
+  const inc = useCounterStore.use.inc()
   return (
     <>
       <div className="flex justify-center">
@@ -19,11 +19,11 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Button icon={<Like />} round color="linear-gradient(to right, #ff6034, #ee0a24)" size="small">
-        Like
+      <Button icon={<Like />} round color="linear-gradient(to right, #ff6034, #ee0a24)" size="small" onClick={inc}>
+        Like {count}
       </Button>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <button onClick={useCounterReset}>Reset</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
