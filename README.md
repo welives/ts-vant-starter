@@ -1,6 +1,6 @@
 # vite-starter
 
-这是一个 `Vite` + `TailwindCSS` + `TypeScript` + `ESLint` + `Prettier` 的起手式
+一个开箱即用的基于 `Vite` + `Pinia` + `Vant` + `TailwindCSS` + `TypeScript` 的模板
 
 `main`分支是 Vue 项目，`use-react`分支是 React 项目
 
@@ -33,8 +33,9 @@ pnpm lint
 ## 相关文档
 
 - [Vite](https://cn.vitejs.dev/)
+- [Pinia](https://pinia.vuejs.org/zh/)
 - [Vant](https://vant-ui.github.io/vant/#/zh-CN)
-- [TypeScript](https://www.tslang.cn/)
 - [TailwindCSS](https://tailwind.nodejs.cn/)
+- [TypeScript](https://www.tslang.cn/)
 - [ESLint](https://eslint.nodejs.cn/)
 - [Prettier](https://prettier.nodejs.cn/)
