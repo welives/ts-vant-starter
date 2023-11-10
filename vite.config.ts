@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from '@vant/auto-import-resolver'
+import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -13,7 +14,7 @@ export default defineConfig(({ mode }) => {
     server: {
       port: isNaN(PORT) ? undefined : PORT,
     },
-    plugins: [vue(), vueJsx(), Components({ resolvers: [VantResolver()] })],
+    plugins: [vue(), vueJsx(), Components({ resolvers: [VantResolver()] }), viteMockServe()],
     resolve: {
       alias: {
         '~': fileURLToPath(new URL('./src', import.meta.url)),

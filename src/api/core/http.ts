@@ -56,7 +56,7 @@ class AxiosRequest {
   private static _instance: AxiosRequest
   private readonly service: AxiosInstance
   private config: RequestConfig = {
-    baseURL: 'http://localhost',
+    baseURL: import.meta.env.VITE_BASE_API,
     timeout: 10000,
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
