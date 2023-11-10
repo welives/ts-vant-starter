@@ -1,6 +1,6 @@
 # vite-starter
 
-一个开箱即用的基于 Vite + React + Zustand + Vant + TailwindCSS + TypeScript 的模板
+一个开箱即用的基于 `Vite` + `React` + `Zustand` + `Vant` + `TailwindCSS` + `TypeScript` 的项目模板
 
 `main`分支是 Vue 项目，`use-react`分支是 React 项目
 
