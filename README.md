@@ -33,7 +33,9 @@ pnpm lint
 ## 相关文档
 
 - [Vite](https://cn.vitejs.dev/)
+- [Vue](https://cn.vuejs.org/guide/introduction.html)
 - [Pinia](https://pinia.vuejs.org/zh/)
+- [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/zh/)
 - [Vant](https://vant-ui.github.io/vant/#/zh-CN)
 - [TailwindCSS](https://tailwind.nodejs.cn/)
 - [TypeScript](https://www.tslang.cn/)
