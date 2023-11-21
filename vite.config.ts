@@ -23,10 +23,8 @@ export default defineConfig(({ mode }) => {
         imports: ['vue', 'pinia', 'vue-router'],
         eslintrc: {
           enabled: true,
-          filepath: './.eslintrc-auto-import.json',
-          globalsPropValue: true,
         },
-        dts: './auto-imports.d.ts',
+        dts: true,
       }),
       Components({ resolvers: [VantResolver()] }),
       viteMockServe(),

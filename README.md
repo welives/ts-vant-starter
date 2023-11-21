@@ -4,7 +4,7 @@
 
 `main`分支是 Vue 项目，`use-react`分支是 React 项目
 
-这个工程的搭建笔记可以在这里[查看](https://welives.github.io/blog/front-end/engineering/vite.html)
+这个工程的搭建笔记可以在这里[查看](https://welives.github.io/blog/front-end/engineering/vite/create-vue.html)
 
 ## 使用
 
