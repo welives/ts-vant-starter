@@ -3,6 +3,7 @@ import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 import { VantResolver } from '@vant/auto-import-resolver'
 import { viteMockServe } from 'vite-plugin-mock'
 
@@ -14,7 +15,22 @@ export default defineConfig(({ mode }) => {
     server: {
       port: isNaN(PORT) ? undefined : PORT,
     },
-    plugins: [vue(), vueJsx(), Components({ resolvers: [VantResolver()] }), viteMockServe()],
+    plugins: [
+      vue(),
+      vueJsx(),
+      AutoImport({
+        include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
+        imports: ['vue', 'pinia', 'vue-router'],
+        eslintrc: {
+          enabled: true,
+          filepath: './.eslintrc-auto-import.json',
+          globalsPropValue: true,
+        },
+        dts: './auto-imports.d.ts',
+      }),
+      Components({ resolvers: [VantResolver()] }),
+      viteMockServe(),
+    ],
     resolve: {
       alias: {
         '~': fileURLToPath(new URL('./src', import.meta.url)),

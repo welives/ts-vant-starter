@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
 import { StorageSceneKey } from '../utils'
 
 export const useUserStore = defineStore(

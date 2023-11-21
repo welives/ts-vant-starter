@@ -1,6 +1,5 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { defineComponent } from 'vue'
 import styles from './assets/app.module.css'
 import Logo from './assets/logo.svg'
 

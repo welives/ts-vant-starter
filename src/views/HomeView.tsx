@@ -1,4 +1,3 @@
-import { defineComponent } from 'vue'
 import TheWelcome from '../components/TheWelcome.vue'
 
 export default defineComponent({

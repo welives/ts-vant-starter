@@ -1,4 +1,3 @@
-import { defineComponent } from 'vue'
 import styles from '../assets/app.module.css'
 
 export default defineComponent({
