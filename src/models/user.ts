@@ -1,8 +1,10 @@
 import { create } from 'zustand'
 import { immer } from 'zustand/middleware/immer'
-import { createJSONStorage, persist, StateStorage } from 'zustand/middleware'
+import type { StateStorage } from 'zustand/middleware'
+import { createJSONStorage, persist } from 'zustand/middleware'
+import { StorageSceneKey } from '../libs'
 import createSelectors from './selectors'
-import { StorageSceneKey } from '../utils'
+
 interface State {
   token: string
   isLogged: boolean
@@ -33,16 +35,16 @@ const userStore = create<State & Action>()(
       (set, get) => ({
         token: '',
         isLogged: false,
-        setToken: (token) => set({ token, isLogged: true }),
+        setToken: token => set({ token, isLogged: true }),
         removeToken: () => set({ token: '', isLogged: false }),
       }),
       {
-        //! 注意这里的name是当前这个Zustand模块进行缓存时的唯一key, 每个需要缓存的Zustand模块都必须分配一个唯一key
+        // ! 注意这里的name是当前这个Zustand模块进行缓存时的唯一key, 每个需要缓存的Zustand模块都必须分配一个唯一key
         name: StorageSceneKey.USER,
         storage: createJSONStorage(() => userStorage),
-      }
-    )
-  )
+      },
+    ),
+  ),
 )
 export const useUserStore = createSelectors(userStore)
 export function useUserReset() {

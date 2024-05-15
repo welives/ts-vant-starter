@@ -3,7 +3,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Like } from '@react-vant/icons'
 import { Button } from 'react-vant'
-import { useCounterStore, useCounterReset } from './models'
+import { useCounterReset, useCounterStore } from './models'
 
 function App() {
   const count = useCounterStore.use.count()
@@ -20,12 +20,18 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <Button icon={<Like />} round color="linear-gradient(to right, #ff6034, #ee0a24)" size="small" onClick={inc}>
-        Like {count}
+        Like
+        {' '}
+        {count}
       </Button>
       <div className="card">
         <button onClick={useCounterReset}>Reset</button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Edit
+          {' '}
+          <code>src/App.tsx</code>
+          {' '}
+          and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
